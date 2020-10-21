@@ -9,7 +9,6 @@
 .symbaroum.sheet.actor .player .sheet-header {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     flex-basis: 100%;
     margin: 5px;
 }
