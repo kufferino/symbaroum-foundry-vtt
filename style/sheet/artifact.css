@@ -8,7 +8,8 @@
 
 
 .symbaroum.sheet.item .artifact .description,
-.symbaroum.sheet.item .artifact .power {
+.symbaroum.sheet.item .artifact .power,
+.symbaroum.sheet.item .artifact .bonus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,4 +34,27 @@
 
 .symbaroum.sheet.item .artifact .tab .corruption {
     margin: 10px 10px 0 5px;
+}
+
+.symbaroum.sheet.item .artifact .tab .bonus .scroll {
+    overflow-y: scroll;
+    height: 186px;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.symbaroum.sheet.item .artifact .tab .bonus .attribute {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 5px 10px;
+}
+
+.symbaroum.sheet.item .artifact .tab .bonus .attribute:first-child {
+    margin-top: 10px;
+}
+
+.symbaroum.sheet.item .artifact .tab .bonus .attribute:last-child {
+    margin-bottom: 10px;
 }

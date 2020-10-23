@@ -58,6 +58,9 @@
   "BURDEN.NAME": "Name",
   "BURDEN.DESCRIPTION": "Description",
 
+  "BUTTON.DEATH": "Death",
+  "BUTTON.RECOVER": "Recover",
+
   "CHAT.DEATH_ROLL": "Death Roll",
   "CHAT.SUCCEED": "Succeed",
   "CHAT.FAILED": "Failed",

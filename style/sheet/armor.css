@@ -7,7 +7,8 @@
 }
 
 .symbaroum.sheet.item .armor .description,
-.symbaroum.sheet.item .armor .stats {
+.symbaroum.sheet.item .armor .stats,
+.symbaroum.sheet.item .armor .bonus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -34,5 +35,28 @@
 }
 
 .symbaroum.sheet.item .armor .tab .quality {
+    margin-bottom: 10px;
+}
+
+.symbaroum.sheet.item .armor .tab .bonus .scroll {
+    overflow-y: scroll;
+    height: 154px;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.symbaroum.sheet.item .armor .tab .bonus .attribute {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 5px 10px;
+}
+
+.symbaroum.sheet.item .armor .tab .bonus .attribute:first-child {
+    margin-top: 10px;
+}
+
+.symbaroum.sheet.item .armor .tab .bonus .attribute:last-child {
     margin-bottom: 10px;
 }
