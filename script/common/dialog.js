@@ -8,7 +8,7 @@ export async function prepareRollAttribute(attribute, armor, weapon) {
         buttons: {
             roll: {
                 icon: '<i class="fas fa-check"></i>',
-                label: "Roll",
+                label: game.i18n.localize("BUTTON.ROLL"),
                 callback: async (html) => {
                     const modifierName = html.find("#modifier")[0].value;
                     const bonus = html.find("#bonus")[0].value;
@@ -18,7 +18,7 @@ export async function prepareRollAttribute(attribute, armor, weapon) {
             },
             cancel: {
                 icon: '<i class="fas fa-times"></i>',
-                label: "Cancel",
+                label: game.i18n.localize("BUTTON.CANCEL"),
                 callback: () => {},
             },
         },

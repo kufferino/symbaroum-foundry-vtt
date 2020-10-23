@@ -60,6 +60,9 @@
 
   "BUTTON.DEATH": "Mort",
   "BUTTON.RECOVER": "Récupérer",
+  "BUTTON.POST_ITEM": "Publier l'Objet",
+  "BUTTON.ROLL": "Lancer",
+  "BUTTON.CANCEL": "Annuler",
 
   "CHAT.DEATH_ROLL": "Test de Mort",
   "CHAT.SUCCEED": "Réussite",
@@ -81,7 +84,7 @@
   "EXPERIENCE": "Expérience",
 
   "GEAR.ACTIVE": "Actif",
-  "GEAR.EQUIPPED": "Equipped",
+  "GEAR.EQUIPPED": "Équipé",
   "GEAR.OTHER": "Autre",
   "GEAR.STATE": "État",
 
@@ -119,7 +122,7 @@
   "TAB.MAIN": "PRINCIPAL",
   "TAB.GEAR": "ÉQUIPEMENTS",
   "TAB.BIO": "BIO",
-  "TAB.NOTE": "NOTE",
+  "TAB.NOTES": "NOTES",
   "TAB.DESCRIPTION": "DESCRIPTION",
   "TAB.NOVICE": "NOVICE",
   "TAB.ADEPT": "ADEPTE",
@@ -132,7 +135,7 @@
   "TITLE.HEALTH": "SANTÉ",
   "TITLE.ATTRIBUTES": "ATTRIBUTS",
   "TITLE.COMBAT": "COMBAT",
-  "TITLE.NOTE": "NOTE",
+  "TITLE.NOTES": "NOTES",
   "TITLE.ARMORS": "ARMURES",
   "TITLE.WEAPONS": "ARMES",
   "TITLE.ARTIFACTS": "ARTEFACTS",
