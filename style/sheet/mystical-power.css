@@ -9,7 +9,8 @@
 .symbaroum.sheet.item .mystical-power .description,
 .symbaroum.sheet.item .mystical-power .novice,
 .symbaroum.sheet.item .mystical-power .adept,
-.symbaroum.sheet.item .mystical-power .master {
+.symbaroum.sheet.item .mystical-power .master,
+.symbaroum.sheet.item .mystical-power .bonus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -37,4 +38,27 @@
 
 .symbaroum.sheet.item .mystical-power .tab .active {
     margin: 10px 10px 0 5px;
+}
+
+.symbaroum.sheet.item .mystical-power .tab .bonus .scroll {
+    overflow-y: scroll;
+    height: 186px;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.symbaroum.sheet.item .mystical-power .tab .bonus .attribute {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 5px 10px;
+}
+
+.symbaroum.sheet.item .mystical-power .tab .bonus .attribute:first-child {
+    margin-top: 10px;
+}
+
+.symbaroum.sheet.item .mystical-power .tab .bonus .attribute:last-child {
+    margin-bottom: 10px;
 }

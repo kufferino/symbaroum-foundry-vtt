@@ -48,22 +48,35 @@
     margin: 5px;
 }
 
+.symbaroum.sheet.actor .player .sheet-header label {
+    width: 100px;
+}
+
+.symbaroum.sheet.actor .player .sheet-header input {
+    width: 50px;
+    flex-grow: 1;
+}
+
 .symbaroum.sheet.actor .player .sheet-header .name,
-.symbaroum.sheet.actor .player .sheet-header .race,
-.symbaroum.sheet.actor .player .sheet-header .occupation {
+.symbaroum.sheet.actor .player .sheet-header .race {
     display: flex;
     flex-direction: row;
     flex-basis: calc(50% - 5px);
     margin-right: 5px;
 }
 
-.symbaroum.sheet.actor .player .sheet-header .shadow,
-.symbaroum.sheet.actor .player .sheet-header .quote,
-.symbaroum.sheet.actor .player .sheet-header .experience {
+.symbaroum.sheet.actor .player .sheet-header .experience,
+.symbaroum.sheet.actor .player .sheet-header .occupation {
     display: flex;
     flex-direction: row;
     flex-basis: calc(50% - 5px);
     margin-left: 5px;
+}
+
+.symbaroum.sheet.actor .player .sheet-header .quote {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
 }
 
 .symbaroum.sheet.actor .player .sheet-tabs {

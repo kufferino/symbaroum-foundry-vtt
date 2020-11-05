@@ -25,7 +25,9 @@ export class SymbaroumActor extends Actor {
             quick: 0,
             resolute: 0,
             strong: 0,
-            vigilant: 0
+            vigilant: 0,
+            toughness: { max: 0, threshold: 0 },
+            corruption: { threshold: 0 }
         };
     }
 
@@ -43,14 +45,15 @@ export class SymbaroumActor extends Actor {
             item.isArmor = item.type === "armor";
             item.isEquipment = item.type === "equipment";
             item.isArtifact = item.type === "artifact";
-            if (item.data.state) this._computeGear(data, item);
+            item.isGear = item.isWeapon || item.isArmor || item.isEquipment || item.isArtifact
+            if (item.isGear) this._computeGear(data, item);
         }
     }
 
     _computeSecondaryAttributes(data) {
-        data.data.health.toughness.max = data.data.attributes.strong.value > 10 ? data.data.attributes.strong.value : 10;
-        data.data.health.toughness.threshold = Math.ceil(data.data.attributes.strong.value / 2);
-        data.data.health.corruption.threshold = Math.ceil(data.data.attributes.resolute.value / 2);
+        data.data.health.toughness.max = (data.data.attributes.strong.value > 10 ? data.data.attributes.strong.value : 10) + data.data.bonus.toughness.max;
+        data.data.health.toughness.threshold = Math.ceil(data.data.attributes.strong.value / 2) + data.data.bonus.toughness.threshold;
+        data.data.health.corruption.threshold = Math.ceil(data.data.attributes.resolute.value / 2) + data.data.bonus.corruption.threshold;
         const activeArmor = this._getActiveArmor(data);
         data.data.combat = {
             id: activeArmor._id,
@@ -77,23 +80,14 @@ export class SymbaroumActor extends Actor {
             if (item.data.master.isActive) master = item.data.master.action;
             item.data.actions = `${novice}/${adept}/${master}`;
         }
+        this._addBonus(data, item);
     }
 
     _computeGear(data, item) {
         item.isActive = item.data.state === "active";
         item.isEquipped = item.data.state === "equipped";
         if (item.isActive) {
-            data.data.bonus = {
-                defense: data.data.bonus.defense + item.data.bonus.defense,
-                accurate: data.data.bonus.accurate + item.data.bonus.accurate,
-                cunning: data.data.bonus.cunning + item.data.bonus.cunning,
-                discreet: data.data.bonus.discreet + item.data.bonus.discreet,
-                persuasive: data.data.bonus.persuasive + item.data.bonus.persuasive,
-                quick: data.data.bonus.quick + item.data.bonus.quick,
-                resolute: data.data.bonus.resolute + item.data.bonus.resolute,
-                strong: data.data.bonus.strong + item.data.bonus.strong,
-                vigilant: data.data.bonus.vigilant + item.data.bonus.vigilant
-            };
+            this._addBonus(data, item);
         }
     }
 
@@ -111,6 +105,27 @@ export class SymbaroumActor extends Actor {
                 quality: "",
                 impeding: 0
             }
+        };
+    }
+
+    _addBonus(data, item) {
+        data.data.bonus = {
+            defense: data.data.bonus.defense + item.data.bonus.defense,
+            accurate: data.data.bonus.accurate + item.data.bonus.accurate,
+            cunning: data.data.bonus.cunning + item.data.bonus.cunning,
+            discreet: data.data.bonus.discreet + item.data.bonus.discreet,
+            persuasive: data.data.bonus.persuasive + item.data.bonus.persuasive,
+            quick: data.data.bonus.quick + item.data.bonus.quick,
+            resolute: data.data.bonus.resolute + item.data.bonus.resolute,
+            strong: data.data.bonus.strong + item.data.bonus.strong,
+            vigilant: data.data.bonus.vigilant + item.data.bonus.vigilant,
+            toughness: {
+                max: data.data.bonus.toughness.max + item.data.bonus.toughness.max,
+                threshold: data.data.bonus.toughness.threshold + item.data.bonus.toughness.threshold
+            },
+            corruption: {
+                threshold: data.data.bonus.corruption.threshold + item.data.bonus.corruption.threshold
+            },
         };
     }
 }

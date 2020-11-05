@@ -17,6 +17,7 @@
             <b class="item" data-tab="novice">{{localize "TAB.NOVICE"}}</b>
             <b class="item" data-tab="adept">{{localize "TAB.ADEPT"}}</b>
             <b class="item" data-tab="master">{{localize "TAB.MASTER"}}</b>
+            <b class="item" data-tab="bonus">{{localize "TAB.BONUS"}}</b>
         </div>
 
         <div class="sheet-body">
@@ -109,6 +110,9 @@
                     </div>
                     {{editor content=data.master.description target="data.master.description" button=true owner=owner editable=editable}}
                 </div>
+            </div>
+            <div class="tab" data-group="primary" data-tab="bonus">
+                {{> systems/symbaroum/template/sheet/tab/bonus.html}}
             </div>
         </div>
     </div>

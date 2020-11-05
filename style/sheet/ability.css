@@ -9,7 +9,8 @@
 .symbaroum.sheet.item .ability .description,
 .symbaroum.sheet.item .ability .novice,
 .symbaroum.sheet.item .ability .adept,
-.symbaroum.sheet.item .ability .master {
+.symbaroum.sheet.item .ability .master,
+.symbaroum.sheet.item .ability .bonus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -34,4 +35,27 @@
 
 .symbaroum.sheet.item .ability .tab .active {
     margin: 10px 10px 0 5px;
+}
+
+.symbaroum.sheet.item .ability .tab .bonus .scroll {
+    overflow-y: scroll;
+    height: 186px;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.symbaroum.sheet.item .ability .tab .bonus .attribute {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 5px 10px;
+}
+
+.symbaroum.sheet.item .ability .tab .bonus .attribute:first-child {
+    margin-top: 10px;
+}
+
+.symbaroum.sheet.item .ability .tab .bonus .attribute:last-child {
+    margin-bottom: 10px;
 }

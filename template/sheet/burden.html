@@ -14,6 +14,7 @@
 
         <div class="sheet-tabs tabs" data-group="primary">
             <b class="item" data-tab="description">{{localize "TAB.DESCRIPTION"}}</b>
+            <b class="item" data-tab="bonus">{{localize "TAB.BONUS"}}</b>
         </div>
 
         <div class="sheet-body">
@@ -22,6 +23,9 @@
                     <h1>{{localize "TITLE.DESCRIPTION"}}</h1>
                     {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
                 </div>
+            </div>
+            <div class="tab" data-group="primary" data-tab="bonus">
+                {{> systems/symbaroum/template/sheet/tab/bonus.html}}
             </div>
         </div>
     </div>

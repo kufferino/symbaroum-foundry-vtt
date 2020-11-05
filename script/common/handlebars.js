@@ -25,6 +25,7 @@ function preloadHandlebarsTemplates() {
     "systems/symbaroum/template/sheet/armor.html",
     "systems/symbaroum/template/sheet/equipment.html",
     "systems/symbaroum/template/sheet/artifact.html",
+    "systems/symbaroum/template/sheet/tab/bonus.html",
     "systems/symbaroum/template/chat/item.html"
   ];
   return loadTemplates(templatePaths);

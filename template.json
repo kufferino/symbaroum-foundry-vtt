@@ -136,11 +136,21 @@
           "quick": 0,
           "resolute": 0,
           "strong": 0,
-          "vigilant": 0
+          "vigilant": 0,
+          "toughness": {
+            "max": 0,
+            "threshold": 0
+          },
+          "corruption": {
+            "threshold": 0
+          }
         }
       }
     },
     "trait": {
+      "templates": [
+        "bonus"
+      ],
       "description": "",
       "novice": {
         "isActive": false,
@@ -159,6 +169,9 @@
       }
     },
     "ability": {
+      "templates": [
+        "bonus"
+      ],
       "description": "",
       "novice": {
         "isActive": false,
@@ -177,6 +190,9 @@
       }
     },
     "mysticalPower": {
+      "templates": [
+        "bonus"
+      ],
       "material": "",
       "description": "",
       "novice": {
@@ -196,13 +212,22 @@
       }
     },
     "ritual": {
+      "templates": [
+        "bonus"
+      ],
       "tradition": "",
       "description": ""
     },
     "burden": {
+      "templates": [
+        "bonus"
+      ],
       "description": ""
     },
     "boon": {
+      "templates": [
+        "bonus"
+      ],
       "description": ""
     },
     "weapon": {

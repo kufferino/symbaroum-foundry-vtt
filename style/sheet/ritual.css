@@ -6,7 +6,8 @@
     width: 100%;
 }
 
-.symbaroum.sheet.item .ritual .description {
+.symbaroum.sheet.item .ritual .description,
+.symbaroum.sheet.item .ritual .bonus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,4 +20,27 @@
     flex-direction: row;
     flex-basis: 100%;
     margin: 10px 10px 0 10px;
+}
+
+.symbaroum.sheet.item .ritual .tab .bonus .scroll {
+    overflow-y: scroll;
+    height: 186px;
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+.symbaroum.sheet.item .ritual .tab .bonus .attribute {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 5px 10px;
+}
+
+.symbaroum.sheet.item .ritual .tab .bonus .attribute:first-child {
+    margin-top: 10px;
+}
+
+.symbaroum.sheet.item .ritual .tab .bonus .attribute:last-child {
+    margin-bottom: 10px;
 }

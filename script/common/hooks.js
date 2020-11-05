@@ -13,6 +13,7 @@ import { ArmorSheet } from "../sheet/armor.js";
 import { EquipmentSheet } from "../sheet/equipment.js";
 import { ArtifactSheet } from "../sheet/artifact.js";
 import { initializeHandlebars } from "./handlebars.js";
+import { migrateWorld } from "./migration.js";
 
 Hooks.once("init", () => {
     CONFIG.Combat.initiative = { formula: "@attributes.quick.value + @attributes.vigilant.value / 100", decimals: 2 };
@@ -33,6 +34,18 @@ Hooks.once("init", () => {
     Items.registerSheet("symbaroum", EquipmentSheet, { types: ["equipment"], makeDefault: true });
     Items.registerSheet("symbaroum", ArtifactSheet, { types: ["artifact"], makeDefault: true });
     initializeHandlebars();
+    game.settings.register("symbaroum", "worldSchemaVersion", {
+        name: "World Version",
+        hint: "Used to automatically upgrade worlds data when the system is upgraded.",
+        scope: "world",
+        config: true,
+        default: 0,
+        type: Number,
+    });
+});
+
+Hooks.once("ready", () => {
+    migrateWorld();
 });
 
 Hooks.on("preCreateActor", (createData) => {

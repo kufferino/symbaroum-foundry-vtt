@@ -33,10 +33,12 @@ function getTargetAttribute(attributeName, bonus) {
     if (target === undefined || attributeName === "custom") {
         return { name: game.i18n.localize("ATTRIBUTE.CUSTOM"), value: 10 - bonus };
     } else if (attributeName === "defense") {
-        let defense = target.actor.data.data.combat.defense;
+        let defense = target.actor.data.data.combat.defense + target.actor.data.data.bonus.defense;
         return { name: game.i18n.localize("ARMOR.DEFENSE"), value: defense - bonus };
     } else {
-        let attribute = target.actor.data.data.attributes[attributeName];
-        return { name: game.i18n.localize(attribute.label), value: attribute.value - bonus };
+        console.log(target.actor.data.data);
+        const attribute = target.actor.data.data.attributes[attributeName];
+        const attributeValue = attribute.value + target.actor.data.data.bonus[attributeName];
+        return { name: game.i18n.localize(attribute.label), value: attributeValue - bonus };
     }
 }

@@ -55,6 +55,15 @@
     margin: 5px;
 }
 
+.symbaroum.sheet.actor .monster .sheet-header label {
+    width: 100px;
+}
+
+.symbaroum.sheet.actor .monster .sheet-header input {
+    width: 50px;
+    flex-grow: 1;
+}
+
 .symbaroum.sheet.actor .monster .sheet-header .name {
     display: flex;
     flex-direction: row;
