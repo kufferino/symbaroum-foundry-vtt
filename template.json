@@ -114,16 +114,16 @@
   },
   "Item": {
     "types": [
-      "trait",
       "ability",
+      "armor",
+      "artifact",
+      "boon",
+      "burden",
+      "equipment",
       "mysticalPower",
       "ritual",
-      "burden",
-      "boon",
-      "weapon",
-      "armor",
-      "equipment",
-      "artifact"
+      "trait",
+      "weapon"
     ],
     "templates": {
       "bonus": {

@@ -140,3 +140,9 @@
     text-shadow: 0 0 10px var(--color-active);
     box-shadow: none;
 }
+
+.symbaroum.sheet.actor .ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

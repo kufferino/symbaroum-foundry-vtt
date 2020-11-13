@@ -231,7 +231,7 @@
 .symbaroum.sheet.actor .monster .main .abilities-powers .traits .trait .button {
     color: var(--color-text);
     text-align: center;
-    flex-basis: 10%;
+    flex-basis: 9%;
     font-size: 20px;
     display: flex;
     align-items: center;
