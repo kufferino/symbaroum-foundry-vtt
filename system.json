@@ -2,7 +2,7 @@
   "name": "symbaroum",
   "title": "Symbaroum",
   "description": "Twilight falls. Davokar darkens.",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "minimumCoreVersion": "0.7.5",
   "compatibleCoreVersion": "0.7.7",
   "templateVersion": 2,
@@ -55,6 +55,11 @@
       "lang": "es",
       "name": "Español",
       "path": "lang/es.json"
+    },
+    {
+      "lang": "swe",
+      "name": "Svenska ",
+      "path": "lang/swe.json"
     }
   ],
   "gridDistance": 1,
@@ -64,6 +69,6 @@
   "url": "https://github.com/Perfectro/symbaroum-foundry-vtt",
   "socket": true,
   "manifest": "https://raw.githubusercontent.com/Perfectro/symbaroum-foundry-vtt/master/system.json",
-  "download": "https://github.com/Perfectro/symbaroum-foundry-vtt/archive/v2.8.zip",
+  "download": "https://github.com/Perfectro/symbaroum-foundry-vtt/archive/v2.9.zip",
   "license": "LICENSE.txt"
 }
