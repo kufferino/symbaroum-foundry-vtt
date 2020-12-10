@@ -1,5 +1,5 @@
 {
-  "ABILITY.NAME": "Nombrebre",
+  "ABILITY.NAME": "Nombre",
   "ABILITY.ACTIVE": "Activa",
   "ABILITY.ACTION": "Acción",
   "ABILITY.DESCRIPTION": "Descripción",
@@ -12,7 +12,7 @@
   "ACTION.MOVEMENT": "Movimiento",
   "ACTION.FULL_TURN": "Todo el Turno",
 
-  "ARMOR.NAME": "Nombrebre",
+  "ARMOR.NAME": "Nombre",
   "ARMOR.PROTECTION": "Protección",
   "ARMOR.PROTECTION_SHORT": "Prot.",
   "ARMOR.IMPENDING": "Incomodidad",
@@ -141,7 +141,7 @@
   "TITLE.NOTES": "NOTAS",
   "TITLE.ARMORS": "ARMADURAS",
   "TITLE.WEAPONS": "ARMAS",
-  "TITLE.ARTIFACTS": "ARTEFACTOR",
+  "TITLE.ARTIFACTS": "ARTEFACTOS",
   "TITLE.EQUIPMENTS": "EQUIPAMIENTOS",
   "TITLE.DESCRIPTION": "DESCRIPCIÓN",
   "TITLE.NOVICE": "NOVATO",
